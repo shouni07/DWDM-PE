@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contact - XPorject{% endblock %}
+
+{% block content %}
+<section class="hero hero-contact">
+    <div class="container">
+        <h1>Get In Touch</h1>
+        <p>Ready to start your next project? Let's talk!</p>
+    </div>
+</section>
+
+<section class="container">
+    <div class="contact-content">
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <div class="contact-item">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <span>hello@yourwebsite.com</span>
+            </div>
+            <!-- ... other contact items ... -->
+        </div>
+
+        <!-- Django Form -->
+        <form method="POST" class="contact-form">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-full">Send Message</button>
+        </form>
+    </div>
+</section>
+{% endblock %}
