@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home - XProject{% endblock %}
+
+{% block content %}
+<section class="hero home"> 
+    <div class="container">
+        <h1>Welcome to XProject</h1> 
+        <p>We create amazing digital experiences</p>
+        <a href="#features" class="btn">Learn More</a>
+    </div>
+</section>
+
+<section id="features" class="section">
+    <div class="container">
+        <h2>Why Choose Us?</h2>
+        <div class="features">
+            <div class="feature-card">
+                <h3>Fast & Reliable</h3>
+                <p>Lightning-fast performance with 99.9% uptime guarantee.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Modern Design</h3>
+                <p>Beautiful, responsive designs that work on all devices.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Great Support</h3>
+                <p>24/7 customer support ready to help you succeed.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
