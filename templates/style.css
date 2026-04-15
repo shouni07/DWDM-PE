@@ -1,0 +1,317 @@
+/* Reset & Base Styles */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body { 
+    font-family: 'Arial', sans-serif; 
+    line-height: 1.6; 
+    color: #333; 
+}
+
+/* Container */
+.container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+/* Header & Navigation */
+header { 
+    background: #2eaee9; 
+    color: white; 
+    padding: 1rem 0; 
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    z-index: 1000; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+nav h2 { 
+    font-size: 1.5rem; 
+}
+
+nav ul { 
+    display: flex; 
+    list-style: none; 
+    gap: 2rem; 
+}
+
+nav a { 
+    color: white; 
+    text-decoration: none; 
+    font-weight: 500; 
+    transition: color 0.3s ease; 
+}
+
+nav a:hover { 
+    color: #3498db; 
+}
+
+/* Main Content */
+main { 
+    padding-top: 100px; 
+    padding-bottom: 50px; 
+}
+
+/* Hero Sections */
+.hero { 
+    padding: 80px 0; 
+    text-align: center; 
+}
+
+.hero.home { 
+    background-image: url(images/b6.jpg); 
+    height: 90vh; 
+    display: flex; 
+    align-items: center; 
+    color: white; 
+}
+
+.hero h1 { 
+    font-size: 3rem; 
+    margin-bottom: 1rem; 
+}
+
+.hero.home h1 { 
+    font-size: 3.5rem; 
+}
+
+.hero p { 
+    font-size: 1.3rem; 
+    margin-bottom: 2rem; 
+    opacity: 0.9; 
+}
+
+.hero.about { 
+    background: #ecf0f1; 
+}
+
+.hero.about h1 { 
+    color: #2c3e50; 
+}
+
+.hero.contact { 
+    background: #3498db; 
+    color: white; 
+}
+
+/* Buttons */
+.btn { 
+    background: #e74c3c; 
+    color: white; 
+    padding: 12px 30px; 
+    text-decoration: none; 
+    border-radius: 50px; 
+    font-weight: bold; 
+    display: inline-block; 
+    transition: background 0.3s ease; 
+    border: none; 
+    cursor: pointer; 
+    font-size: 1rem; 
+}
+
+.btn:hover { 
+    background: #c0392b; 
+}
+
+.btn.full { 
+    width: 100%; 
+    border-radius: 5px; 
+}
+
+/* Sections */
+.section { 
+    padding: 60px 0; 
+}
+
+.section h2 { 
+    font-size: 2.5rem; 
+    text-align: center; 
+    margin-bottom: 3rem; 
+    color: #2c3e50; 
+}
+
+/* Grid Layouts */
+.features, .team-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 2rem; 
+}
+
+.team-grid { 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+}
+
+/* Cards */
+.feature-card, .team-member { 
+    text-align: center; 
+    padding: 2rem; 
+    background: white; 
+    border-radius: 10px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.feature-card:hover, .team-member:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15); 
+}
+
+/* About Page Specific */
+.about-content { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 4rem; 
+    align-items: center; 
+    margin: 4rem 0; 
+}
+
+.about-text h2 { 
+    font-size: 2.5rem; 
+    margin-bottom: 1.5rem; 
+    color: #2c3e50; 
+}
+
+.stats { 
+    background: #3498db; 
+    color: white; 
+    padding: 2rem; 
+    border-radius: 10px; 
+    text-align: center; 
+}
+
+.stat { 
+    display: inline-block; 
+    margin: 0 2rem; 
+}
+
+.stat-number { 
+    font-size: 2.5rem; 
+    font-weight: bold; 
+    display: block; 
+}
+
+/* Contact Page Specific */
+.contact-content { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 4rem; 
+    margin: 4rem 0; 
+}
+
+.contact-info h2 { 
+    font-size: 2.5rem; 
+    margin-bottom: 2rem; 
+    color: #2c3e50; 
+}
+
+.contact-item { 
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 1.5rem; 
+    padding: 1rem; 
+    background: #f8f9fa; 
+    border-radius: 8px; 
+    transition: background 0.3s ease; 
+}
+
+.contact-item:hover { 
+    background: #e9ecef; 
+}
+
+.contact-item svg { 
+    width: 24px; 
+    height: 24px; 
+    margin-right: 1rem; 
+    fill: #3498db; 
+}
+
+.contact-form { 
+    background: #f8f9fa; 
+    padding: 2rem; 
+    border-radius: 10px; 
+}
+
+.form-group { 
+    margin-bottom: 1.5rem; 
+}
+
+.form-group label { 
+    display: block; 
+    margin-bottom: 0.5rem; 
+    font-weight: 500; 
+    color: #2c3e50; 
+}
+
+.form-group input, 
+.form-group textarea { 
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    font-size: 1rem; 
+    font-family: inherit; 
+    transition: border-color 0.3s ease; 
+}
+
+.form-group input:focus, 
+.form-group textarea:focus { 
+    outline: none; 
+    border-color: #3498db; 
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1); 
+}
+
+.form-group textarea { 
+    height: 120px; 
+    resize: vertical; 
+}
+
+/* Footer */
+footer { 
+    background: #34495e; 
+    color: white; 
+    text-align: center; 
+    padding: 2rem 0; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container { padding: 0 15px; }
+    
+    nav { flex-direction: column; gap: 1rem; }
+    nav ul { gap: 1rem; }
+    
+    .hero h1 { font-size: 2.5rem; }
+    .hero.home h1 { font-size: 2.8rem; }
+    
+    .about-content, 
+    .contact-content { 
+        grid-template-columns: 1fr; 
+        gap: 2rem; 
+    }
+    
+    .features, .team-grid { 
+        grid-template-columns: 1fr; 
+    }
+    
+    .stat { margin: 1rem 0; }
+    
+    main { padding-top: 120px; }
+}
+
+@media (max-width: 480px) {
+    .hero h1 { font-size: 2rem; }
+    .section h2, .about-text h2, .contact-info h2 { font-size: 2rem; }
+    
+    nav h2 { font-size: 1.2rem; }
+}
